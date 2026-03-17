@@ -1,16 +1,9 @@
-# Deployment Fix TODO
+# Vercel Vite Hang Fix TODO
 
-## Plan Steps:
-1. [x] Create .npmrc ✅
-2. [x] Removed @studio-freight/lenis via npm uninstall ✅
-3. [x] Clean install (del node_modules package-lock.json && npm install) ✅
-4. [x] Regenerated lockfile ✅
-
-**Final manual steps (run now):**
-```
-git add .
-git commit -m "fix(deploy): remove lenis + clean deps (.npmrc)"
-git push
-```
-
-Vercel deploys clean! 🚀
+1. [x] Previous fixes (.npmrc, deps clean) ✅
+2. [x] Edited package.json: vite ^5.4.11 + plugin-react ^4.3.3 ✅
+3. [x] `npm install` ✅
+4. `git add .`
+5. `git commit -m "fix(vite): downgrade to v5.x for Vercel build"`
+6. `git push`
+7. [ ] Vercel deploys successfully
