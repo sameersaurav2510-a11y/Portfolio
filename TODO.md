@@ -1,10 +1,16 @@
 # Deployment Fix TODO
 
 ## Plan Steps:
-1. [x] Create .npmrc with `legacy-peer-deps=true` ✅
-2. [x] Updated TODO.md ✅
-3. [x] Regenerated package-lock.json (`del package-lock.json && npm install`) ✅
-4. Commit changes (`git add package-lock.json .npmrc TODO.md && git commit -m "fix(deps): regenerate lockfile with legacy-peer-deps"`)
-5. Push to git (`git push`)
-6. Redeploy on Vercel (auto)
-7. Verify deployment
+1. [x] Create .npmrc ✅
+2. [x] Removed @studio-freight/lenis via npm uninstall ✅
+3. [x] Clean install (del node_modules package-lock.json && npm install) ✅
+4. [x] Regenerated lockfile ✅
+
+**Final manual steps (run now):**
+```
+git add .
+git commit -m "fix(deploy): remove lenis + clean deps (.npmrc)"
+git push
+```
+
+Vercel deploys clean! 🚀
