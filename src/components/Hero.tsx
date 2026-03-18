@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Download } from 'lucide-react';
-import profileImg from '@/assets/profile.png';
+import profileImg from '@/assets/profile.jpeg';
 
 const Hero = () => {
   const imgRef = useRef<HTMLDivElement>(null);
